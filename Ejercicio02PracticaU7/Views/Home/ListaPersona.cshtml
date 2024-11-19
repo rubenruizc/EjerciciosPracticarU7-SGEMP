@@ -1,0 +1,31 @@
+﻿@model List<Ejercicio02PracticaU7.Models.clsPersona>
+
+@{
+    ViewBag.Title = "Lista de Personas";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var persona in Model)
+        {
+            <tr>
+                <td>@persona.Name</td>
+                <td>@persona.Apellido</td>
+                <td>@persona.Id</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a href="@Url.Action("Index", "Home")">Volver a la página principal</a>
+</p>

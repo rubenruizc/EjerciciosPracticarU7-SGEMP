@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Página Principal";
+}
+
+<h2>@ViewData["Saludo"]</h2>
+<p>Fecha actual: @ViewBag.FechaActual</p>
+
+<p>
+    <a href="@Url.Action("ListaPersona", "Home")">Ver listado de personas</a>
+</p>
